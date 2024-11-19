@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Uts</string>
+    <string name="appBarTitle">Hello App</string>
+    <string name="next">Next</string>
+    <string name="submit">Submit</string>
+    <string name="title">Enter\nyour\nname\nbelow!</string>
+    <string name="message">Hello,</string>
+    <string name="insert_your_name">Insert your name</string>
+    <string name="insert_your_age">Insert your age</string>
+    <string name="welcome">Selamat datang di aplikasi kami</string>
+    <string name="input_data">Silahkan input data anda\nterlebih dahulu!</string>
+    <string name="name">Name</string>
+    <string name="age">Age</string>
+    <string name="email">Email</string>
+    <string name="creator">Restu Gede Purnama</string>
+</resources>

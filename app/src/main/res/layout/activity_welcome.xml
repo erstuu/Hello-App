@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WelcomeActivity"
+    android:background="@color/slightly_white">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/slightly_white"
+            app:title="@string/appBarTitle"
+            app:titleTextColor="@color/slightly_grey" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/tv_greeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:text="@string/message"
+        android:textColor="@color/slightly_grey"
+        android:textSize="80sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.236"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/slightly_grey"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_greeting"
+        app:layout_constraintTop_toBottomOf="@+id/tv_greeting"
+        tools:text="@string/name" />
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/slightly_grey"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name"
+        android:text="@string/welcome" />
+
+    <TextView
+        android:id="@+id/tv_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:textColor="@color/slightly_grey"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name"
+        android:text="@string/input_data" />
+
+    <TextView
+        android:id="@+id/tv_name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/name"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_data"
+        app:layout_constraintTop_toBottomOf="@+id/tv_data" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputEditTextLayoutName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:hintEnabled="false"
+        app:layout_constraintStart_toStartOf="@+id/tv_name_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_label">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEditTextName"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_text_input"
+            android:hint="@string/insert_your_name" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_age_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/age"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_data"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEditTextLayoutName" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputEditTextLayoutAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:hintEnabled="false"
+        app:layout_constraintStart_toStartOf="@+id/tv_age_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_age_label">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEditTextAge"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:background="@drawable/rounded_text_input"
+            android:hint="@string/insert_your_age" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_email_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_data"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEditTextLayoutAge" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputEditTextLayoutEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:hintEnabled="false"
+        app:layout_constraintStart_toStartOf="@+id/tv_email_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_email_label">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEditTextEmail"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/rounded_text_input"
+            android:hint="@string/insert_your_age" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/submit_button"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded"
+        android:text="@string/submit"
+        android:textColor="@color/slightly_white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/textInputEditTextLayoutEmail"
+        app:layout_constraintHorizontal_bias="0.292"
+        app:layout_constraintStart_toStartOf="@+id/textInputEditTextLayoutEmail"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEditTextLayoutEmail" />
+
+    <TextView
+        android:id="@+id/tv_creator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:text="@string/creator"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,6 @@
 # UTS Mobile Lanjut
-# Feaures
-Validation Input<br>
+# Features
+## Validation Input<br>
 Alur Aplikasi : <br>
 <p align="left">
   <img src="https://github.com/user-attachments/assets/2eaab105-7cff-437b-a5b1-3f2e66ab30b2" alt="Image 1" width="300"/>
